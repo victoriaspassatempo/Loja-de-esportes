@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:mem/localhost:3306/nunus-sports
+    username: admin
+    password: admin
+    driverClassName: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+jakarta:
+  persistence:
+    database-platform: org.hibernate.dialect.H2Dialect
