@@ -1,1 +1,2 @@
-# DESAFIO-EVERYMIND---Best-Minds-2024
+# Crud loja de esportes
+
