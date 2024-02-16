@@ -1,9 +1,11 @@
 package nunus.sports.crud.models;
 
-import jakarta.persistence.*;
 import lombok.*;
 
+import javax.persistence.*;
+
 @Entity
+@Table(name = "tb_Produto")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
