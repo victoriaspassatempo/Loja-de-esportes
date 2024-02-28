@@ -3,7 +3,6 @@ package nunus.sports.crud.controllers;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import nunus.sports.crud.models.Produto;
-import nunus.sports.crud.repositories.ProdutoRepository;
 import nunus.sports.crud.services.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
