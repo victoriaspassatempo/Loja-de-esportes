@@ -24,8 +24,14 @@ public class ProdutoService {
         return produtoRepository.save(produto);
     }
 
-    public void excluirProdutoporId(int id) {
-        produtoRepository.deleteById(id);
+    public void excluirProdutoPorId(int id) {
+        Produto produtoExistente = produtoRepository.findById(id);
+        if (produtoExistente != null) {
+            produtoRepository.deleteById(id);
+            System.out.println("Produto excluído com sucesso!");
+        } else {
+            System.out.println("Produto não encontrado.");
+        }
     }
 
     public Produto atualizarProduto(int id, Produto produtoAtualizado) {

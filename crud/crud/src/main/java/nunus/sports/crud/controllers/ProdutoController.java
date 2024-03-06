@@ -7,7 +7,7 @@ import nunus.sports.crud.services.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.*;
+import java.util.List;
 
 
 @RestController
@@ -24,33 +24,32 @@ public class ProdutoController {
     }
 
     @GetMapping
-    @ApiOperation(value="Retorna uma lista de Produtos") // É opcional, porém ajuda a reforçar o que o endpoint esta fazendo
+    @ApiOperation(value = "Retorna uma lista de produtos")
+    // É opcional, porém ajuda a reforçar o que o endpoint esta fazendo
     public List<Produto> obterTodosProdutos() {
         return produtoService.obterTodosProdutos();
     }
 
     @GetMapping("/{id}")
+    @ApiOperation(value = "Retorna um produto especifico pelo id")
     public Produto obterProdutoPorId(@PathVariable int id) {
         return produtoService.obterProdutoPorId(id);
     }
 
     @PostMapping
+    @ApiOperation(value = "Salva um produto")
     public Produto salvarProduto(@RequestBody Produto produto) {
         return produtoService.salvarProduto(produto);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("excluir/{id}")
+    @ApiOperation(value = "Deleta um produto")
     public void excluirProdutoporId(@PathVariable int id) {
-        produtoService.excluirProdutoporId(id);
-    }
-
-    @DeleteMapping("/{codProduto}")
-    public void excluirProdutoporCodProduto(@PathVariable int codProduto) {
-        this.codProduto = codProduto;
-        produtoService.excluirProdutoporId(codProduto);
+        produtoService.excluirProdutoPorId(id);
     }
 
     @PutMapping("/{id}")
+    @ApiOperation(value = "Edita um produto")
     public Produto atualizarProduto(@PathVariable int id, @RequestBody Produto produtoAtualizado) {
         return produtoService.atualizarProduto(id, produtoAtualizado);
     }
