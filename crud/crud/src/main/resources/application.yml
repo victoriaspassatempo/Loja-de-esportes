@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:file:mem/localhost:3306/nunus-sports
+    url: jdbc:h2:file:./nunus-sports
     username: admin
     password: admin
     driverClassName: org.h2.Driver
