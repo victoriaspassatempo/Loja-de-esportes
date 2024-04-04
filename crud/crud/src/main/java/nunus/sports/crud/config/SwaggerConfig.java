@@ -6,14 +6,12 @@ import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
-import springfox.documentation.service.VendorExtension;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 import java.util.ArrayList;
 
 @Configuration
-
 public class SwaggerConfig {
     @Bean
     public Docket productApi() {
@@ -32,9 +30,9 @@ public class SwaggerConfig {
                 "API REST de cadastro de produtos.",
                 "1.0",
                 "Terms of Service",
-                new Contact("pipipopo", "pipipopo.com.br", "pipipopo@gmail.com"),
+                new Contact("Nunus SPorts", "Nunus.com.br", "Nunus@nunus.com"),
                 "Apache License Version 2.0",
-                "https://www.apache.org/licesen.html", new ArrayList<VendorExtension>()
+                "https://www.apache.org/licesen.html", new ArrayList<>()
         );
     }
 
