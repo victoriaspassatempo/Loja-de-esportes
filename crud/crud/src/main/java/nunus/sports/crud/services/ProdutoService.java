@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class ProdutoService {
-    @Autowired(required = true)
+    @Autowired
     private ProdutoRepository produtoRepository;
 
     public List<Produto> obterTodosProdutos() {

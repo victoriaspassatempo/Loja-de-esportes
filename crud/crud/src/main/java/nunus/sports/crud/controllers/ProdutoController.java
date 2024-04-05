@@ -15,8 +15,8 @@ import java.util.List;
 @Api(value = "API Rest Produtos")
 @CrossOrigin(value = "*") // posso determinar o dominio de acesso, nesse caso ele esta aceitando todos os dominios
 public class ProdutoController {
+
     private final ProdutoService produtoService;
-    private int codProduto;
 
     @Autowired
     public ProdutoController(ProdutoService produtoService) {
@@ -24,8 +24,7 @@ public class ProdutoController {
     }
 
     @GetMapping
-    @ApiOperation(value = "Retorna uma lista de produtos")
-    // É opcional, porém ajuda a reforçar o que o endpoint esta fazendo
+    @ApiOperation(value = "Retorna uma lista de produtos") // É opcional, porém ajuda a reforçar o que o endpoint esta fazendo
     public List<Produto> obterTodosProdutos() {
         return produtoService.obterTodosProdutos();
     }
