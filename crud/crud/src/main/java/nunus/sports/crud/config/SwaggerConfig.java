@@ -35,5 +35,4 @@ public class SwaggerConfig {
                 "https://www.apache.org/licesen.html", new ArrayList<>()
         );
     }
-
 }

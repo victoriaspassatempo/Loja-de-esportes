@@ -15,6 +15,7 @@ import java.util.List;
 @Api(value = "API Rest Produtos")
 @CrossOrigin(value = "*") // posso determinar o dominio de acesso, nesse caso ele esta aceitando todos os dominios
 public class ProdutoController {
+
     private final ProdutoService produtoService;
 
     @Autowired
